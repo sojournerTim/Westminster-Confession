@@ -40,7 +40,7 @@ public class chapterchooser extends ListActivity {
               Intent i = new Intent();
               // sending data to new activity
               i.putExtra("chapterChosen", position);
-             
+             //
               setResult(Activity.RESULT_OK, i);
               finish();
           }
