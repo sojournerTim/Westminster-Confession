@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+	
+    
+    <item android:id="@+id/Chapter" android:showAsAction="always" android:title="Chapters"></item><item android:id="@+id/chapterdecrease" android:showAsAction="always" android:icon="@drawable/ic_action_chapter_decrease" android:title="chapterdecrease"></item>
+    
+    <item android:id="@+id/chapterincrease" android:showAsAction="always" android:icon="@drawable/ic_action_chapter_increase" android:title="chapterincrease"></item>
+    
+
+</menu>
