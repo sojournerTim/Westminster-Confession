@@ -19,13 +19,17 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		//ScrollView myview;
+		//myview = (ScrollView)findViewById(R.id.myview);
+    	//myview.scrollTo(0,0);
 		Resources res = getResources();
 		String[] chapterNumbers = res.getStringArray(R.array.chapterNumbers);
 		String[] chapterTitles = res.getStringArray(R.array.chapterTitles);
 		String[] chapterText = res.getStringArray(R.array.chapterText);
     	((TextView)findViewById (R.id.chapterNumber)).setText (chapterNumbers[0]);
-    	((TextView)findViewById (R.id.chapterTitle)).setText (chapterTitles[0]);
+    	
     	((TextView)findViewById (R.id.content)).setText (chapterText[0]);
+    	((TextView)findViewById (R.id.chapterTitle)).setText (chapterTitles[0]);
 	}
 	
 	@Override
@@ -44,9 +48,7 @@ public class MainActivity extends Activity {
 		String[] chapterNumbers = res.getStringArray(R.array.chapterNumbers);
 		String[] chapterTitles = res.getStringArray(R.array.chapterTitles);
 		String[] chapterText = res.getStringArray(R.array.chapterText);
-		ScrollView myview;
-		myview = (ScrollView)findViewById(R.id.myview);
-    	myview.scrollTo(0,0);
+		
 		// Handle item selection
 	    switch (item.getItemId()) {
 	        case R.id.chapterincrease:
@@ -56,6 +58,9 @@ public class MainActivity extends Activity {
 	        		((TextView)findViewById (R.id.chapterNumber)).setText (chapterNumbers[counter]);
 		    		((TextView)findViewById (R.id.chapterTitle)).setText (chapterTitles[counter]);
 		    		((TextView)findViewById (R.id.content)).setText (chapterText[counter]);
+		    		ScrollView myview;
+		    		myview = (ScrollView)findViewById(R.id.myview);
+		        	myview.smoothScrollTo(0,0);
 		    		return true;
 	        	} else {
 	        		//counter = 2;
@@ -75,6 +80,9 @@ public class MainActivity extends Activity {
 	            	((TextView)findViewById (R.id.chapterNumber)).setText (chapterNumbers[counter]);
 		    		((TextView)findViewById (R.id.chapterTitle)).setText (chapterTitles[counter]);
 		    		((TextView)findViewById (R.id.content)).setText (chapterText[counter]);
+		    		ScrollView myview;
+		    		myview = (ScrollView)findViewById(R.id.myview);
+		        	myview.smoothScrollTo(0,0);
 		            return true;
 	            } else {
 	            	Log.v("","test");

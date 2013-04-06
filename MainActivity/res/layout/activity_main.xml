@@ -3,22 +3,25 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" 
         android:scrollbars="vertical" 
-        android:visibility="visible">
+        android:visibility="visible"
+        >
 
 <LinearLayout
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:paddingTop="10dp" >
+    >
 
     <RelativeLayout 
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:gravity="center_horizontal"
+    android:paddingTop="10dp"
     android:orientation="vertical" >
     <TextView
         android:id="@+id/chapter"
+        android:textIsSelectable="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -27,6 +30,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
     <TextView
         android:id="@+id/chapterNumber"
+        android:textIsSelectable="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@+id/chapter"
@@ -41,11 +45,14 @@
 
     <TextView
         android:id="@+id/chapterTitle"
+        android:textIsSelectable="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:gravity="center_horizontal"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:textStyle="italic"
+        android:textSize="18sp"
+         />
    
     </RelativeLayout>
     <RelativeLayout 
@@ -61,7 +68,7 @@
         android:layout_marginLeft="10dp"
         android:textSize="16sp"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="26dp"
+        android:paddingTop="26dp"
         android:lineSpacingMultiplier="1.2" />
     </RelativeLayout>
     
